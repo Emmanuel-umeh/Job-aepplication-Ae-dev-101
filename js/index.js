@@ -197,7 +197,7 @@ async function uploadFile(file) {
 
 
 
-// Register Game
+// Register User
 $('#submitBtn').click(async function () {
   $("#loadings").show();
 
