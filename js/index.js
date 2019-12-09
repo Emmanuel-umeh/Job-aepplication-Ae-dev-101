@@ -1,8 +1,10 @@
 const contractSource = `
+
 payable contract CvUpload =
 
     type i = int
     type s = string
+    type a = address
     record user = {
         name : s,
         email : s,
@@ -13,7 +15,7 @@ payable contract CvUpload =
 
         cv : s,
         hired : int,
-        ownerAddress : address,
+        ownerAddress : a,
         id : i}
 
     record state = {
@@ -51,6 +53,8 @@ payable contract CvUpload =
 
 
     stateful payable entrypoint hireUser(index : i) = 
+        let employeeAddress = getUserById(index).ownerAddress
+        require(Call.caller != employeeAddress, "You cannot hire yourself;)")
 
         // require(state.users[index].hired == false, "THis worker has been hired by another company" )
 
@@ -60,6 +64,7 @@ payable contract CvUpload =
 
         put(state{users[index].hired = hired })
         "Hired successfully"
+
 
 
 `;
