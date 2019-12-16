@@ -323,3 +323,21 @@ $('#registerLink').click( function(event){
   $('#section').hide();
 
 })
+
+// Show the registered users
+
+$('#userLink').click( function(event){
+  console.log("Showing user list")
+  $('#registerSection').hide();
+  $('#section').show();
+
+})
+
+// Go back to the default page
+$('#homeLink').click( function(event){
+  console.log("Showing home")
+
+  window.reload(true)
+  
+
+})
