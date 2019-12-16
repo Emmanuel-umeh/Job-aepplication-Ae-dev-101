@@ -2362,7 +2362,8 @@ $("#section").on( "click", ".downloadCVButton", async function (event) {
 
 // Show the Register form
 
-$('registerLink').click( function(event){
+$('#registerLink').click( function(event){
+  console.log("Showing register form")
   $('#registerSection').show();
   $('#section').hide();
 
