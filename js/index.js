@@ -337,7 +337,7 @@ $('#userLink').click( function(event){
 $('#homeLink').click( function(event){
   console.log("Showing home")
 
-  window.reload(true)
+  location.reload(true)
   
 
 })
