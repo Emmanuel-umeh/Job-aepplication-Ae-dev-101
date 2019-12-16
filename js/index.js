@@ -125,6 +125,7 @@ async function contractCall(func, args, value) {
 document.addEventListener('DOMContentLoaded', async () => {
 
   $("#loadings").show();
+  $('#registerSection').hide();
 
 
   const node = await IpfsHttpClient({
@@ -143,6 +144,7 @@ var buffer = null
 
 window.addEventListener('load', async () => {
   $("#loadings").show();
+  $('#registerSection').hide();
 
   client = await Ae.Aepp()
 
@@ -312,3 +314,11 @@ $("#section").on( "click", ".downloadCVButton", async function (event) {
   
   $("#loadings").hide();
 });
+
+// Show the Register form
+
+$('registerLink').click( function(event){
+  $('#registerSection').show();
+  $('#section').hide();
+
+})

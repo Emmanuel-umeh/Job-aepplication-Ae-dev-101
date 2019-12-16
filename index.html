@@ -36,10 +36,10 @@
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Users</a>
+          <a class="nav-link" href="#" id="userLink">Users</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Register</a>
+          <a class="nav-link" href="#" id="registerLink">Register</a>
         </li>
         <li class="nav-item">
           <a class="nav-link disabled" href="#">Disabled</a>
@@ -83,8 +83,9 @@
                   <hr style="color: crimson;">
 
 
-                <h2>Hire A User Here</h2>
+                
                   <div id="section">
+                    <h2>Hire A User Here</h2>
                     <p>Fetching from the blockchain.....</p>
                     <p>Please Wait...</p>
       
@@ -93,108 +94,113 @@
                     <br>
                     <br>
                     <hr style="color: crimson;">
-                    
-                <h2>Register To Be Hired</h2>
-                <br>
-                <br>
 
-                
 
-                <div class="name">Full name</div>
-                <div class="value">
-                  <input
-                    id="newName"
-                    class="input--style-6"
-                    type="text"
-                    name="full_name"
-                    placeholder="Name"
-                  />
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="name">Email address</div>
-                <div class="value">
-                  <div class="input-group">
-                    <input
-                      id="newEmail"
-                      class="input--style-6"
-                      type="email"
-                      name="email"
-                      placeholder="example@email.com"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="name">Your Price Per Month in Aettos</div>
-                <div class="value">
-                  <div class="input-group">
-                    <input
-                      id="newPrice"
-                      class="input--style-6"
-                      type="number"
-                      name="newPrice"
-                      placeholder="1234"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div class="form-row">
-                  <div class="name">Companies you have worked for. If none write "none"</div>
-                  <div class="value">
-                    <div class="input-group">
-                      <input
-                        id="newCompany"
-                        class="input--style-6"
-                        type="text"
-                        name="newCompany"
-                        placeholder="Aeternity"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="name">Your Occupation</div>
-                    <div class="value">
-                      <div class="input-group">
+                    <div id="registerSection">
+                      <h2>Register To Be Hired</h2>
+                      <br>
+                      <br>
+      
+                      
+      
+                      <div class="name">Full name</div>
+                      <div class="value">
                         <input
-                          id="newWork"
+                          id="newName"
                           class="input--style-6"
                           type="text"
-                          name="newWork"
-                          placeholder="Web Developer"
+                          name="full_name"
+                          placeholder="Name"
                         />
                       </div>
                     </div>
-                  </div>
-
-                <div class="form-row">
-                    <div class="name">How many hours can you work per day</div>
-                    <div class="value">
-                      <div class="input-group">
-                        <input
-                          id="newHours"
-                          class="input--style-6"
-                          type="number"
-                          name="newHours"
-                          placeholder="1234"
-                        />
+                    <div class="form-row">
+                      <div class="name">Email address</div>
+                      <div class="value">
+                        <div class="input-group">
+                          <input
+                            id="newEmail"
+                            class="input--style-6"
+                            type="email"
+                            name="email"
+                            placeholder="example@email.com"
+                          />
+                        </div>
                       </div>
                     </div>
+      
+                    <div class="form-row">
+                      <div class="name">Your Price Per Month in Aettos</div>
+                      <div class="value">
+                        <div class="input-group">
+                          <input
+                            id="newPrice"
+                            class="input--style-6"
+                            type="number"
+                            name="newPrice"
+                            placeholder="1234"
+                          />
+                        </div>
+                      </div>
+                    </div>
+      
+                    <div class="form-row">
+                        <div class="name">Companies you have worked for. If none write "none"</div>
+                        <div class="value">
+                          <div class="input-group">
+                            <input
+                              id="newCompany"
+                              class="input--style-6"
+                              type="text"
+                              name="newCompany"
+                              placeholder="Aeternity"
+                            />
+                          </div>
+                        </div>
+                      </div>
+      
+                      <div class="form-row">
+                          <div class="name">Your Occupation</div>
+                          <div class="value">
+                            <div class="input-group">
+                              <input
+                                id="newWork"
+                                class="input--style-6"
+                                type="text"
+                                name="newWork"
+                                placeholder="Web Developer"
+                              />
+                            </div>
+                          </div>
+                        </div>
+      
+                      <div class="form-row">
+                          <div class="name">How many hours can you work per day</div>
+                          <div class="value">
+                            <div class="input-group">
+                              <input
+                                id="newHours"
+                                class="input--style-6"
+                                type="number"
+                                name="newHours"
+                                placeholder="1234"
+                              />
+                            </div>
+                          </div>
+                        </div>
+      
+              
+                      <div class="name">Upload CV</div>
+                      <input type="file"  id="addedFile" style="border: solid 1px blue">
+                     
+                  <div class="card-footer">
+                    <button style="color: crimson;" class="btn btn--radius-2 btn--blue-2" id="submitBtn">
+                      Upload here
+                    </button>
                   </div>
-
-        
-                <div class="name">Upload CV</div>
-                <input type="file"  id="addedFile" style="border: solid 1px blue">
+                    </div>
+                    
                
-            <div class="card-footer">
-              <button style="color: crimson;" class="btn btn--radius-2 btn--blue-2" id="submitBtn">
-                Upload here
-              </button>
-            </div>
           </div>
         </div>
       </div>
